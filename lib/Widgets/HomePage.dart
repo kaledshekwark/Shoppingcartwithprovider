@@ -32,7 +32,7 @@ class _HomePageState extends State<HomePage> {
        
         backgroundColor: Colors.black,
         centerTitle: true,
-        title: Text("Cart With Providers ",
+        title: Text("Shopping Cart With Providers ",
         style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)
             
         
@@ -71,6 +71,15 @@ class _HomePageState extends State<HomePage> {
        );
       },
         itemCount:product.length ,),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(builder: (context) => ItemInShopinCard()),
+            );
+          },
+          child: Icon(Icons.shopping_cart),
+        ),
+
     );
   }
 }

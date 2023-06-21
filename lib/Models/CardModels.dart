@@ -15,7 +15,9 @@ void AddItem(Item item)
  notifyListeners();
 }
 double get TotalPrice{
+  notifyListeners();
   return Totprice;
+
 
 }
 int get NumberOfItem{
@@ -26,6 +28,12 @@ List<Item> get CartShopping{
   return items;
 }
 
+void DeletItem(Item item)
+{
+  items.remove(item);
+  Totprice-=item.price;
+  notifyListeners();
+}
 
 
 }
